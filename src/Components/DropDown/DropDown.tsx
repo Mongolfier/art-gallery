@@ -1,25 +1,17 @@
-import { ReactNode, useState } from "react";
+import DropDownToggle from "./DropDownToggle";
+import DropDownMenu from "./DropDownMenu";
+import DropDownItem from "./DropDownItem";
 
 interface DropDownProps {
-  menuItems: ReactNode[];
+  children: JSX.Element[] | string[];
 }
 
-
-const DropDown = (props: DropDownProps) => {
-  const { menuItems } = props;
-
-  const [openedDD, setOpenedDD] = useState(false);
-
-  return (
-    <div className="DropDown">
-      <button onClick={() => setOpenedDD(!openedDD)}>DropDown</button>
-      {openedDD && (
-        <div>
-          {menuItems}
-        </div>
-      )}
-    </div>
-  );
+const DropDown = ({children}: DropDownProps) => {
+  return <>{children}</>;
 }
+
+DropDown.Toggle = DropDownToggle;
+DropDown.Menu = DropDownMenu;
+DropDown.Item = DropDownItem;
 
 export default DropDown;
