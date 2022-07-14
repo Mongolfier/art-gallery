@@ -8,7 +8,7 @@ const Animations = () => {
     <>
       <div>{t("animations").toUpperCase()}</div>
 
-      <DropDown>
+      <DropDown label="Меню">
         <DropDown.Item>LUL</DropDown.Item>
         <DropDown.Item>Eeee</DropDown.Item>
         <DropDown.Item>Ssss</DropDown.Item>

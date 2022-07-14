@@ -1,9 +1,9 @@
 interface DropDownItemProps {
-  children: JSX.Element | string;
+  children: JSX.Element | React.FC | string;
 }
 
 const DropDownItem = ({children}: DropDownItemProps): JSX.Element => {
-  return (<li>{children}</li>);
+  return (<>{children}</>);
 }
 
 export default DropDownItem;
